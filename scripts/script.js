@@ -6,9 +6,10 @@ let addButton = document.getElementById("add");
 
 // to add an element when enter key is pressed i.e enter=13
 inputField.onkeyup=function(event){
-  let inputField = document.getElementById("additem");
-  let userIn = inputField.value;
-  let todolist = document.getElementById("list");
+  // let inputField = document.getElementById("additem");
+  // let rawInput = inputField.value;
+  // let userIn = rawInput.trimLeft();
+  // let todolist = document.getElementById("list");
   if(event.which==13){
    enterPressed();
   }
@@ -18,7 +19,8 @@ inputField.onkeyup=function(event){
 // when add button is clicked.
 function enterPressed() {
   let inputField = document.getElementById("additem");
-  let userIn = inputField.value;     
+  let rawInput = inputField.value;
+  let userIn = rawInput.trimLeft();  
   if (userIn == ""){
     alert("please enter data");
   }
@@ -45,8 +47,9 @@ function createDiv(todolist, userIn){
   checkBox.id= "cb_" + id;
   let label = document.createElement("label");
   label.htmlFor = "cb_" + id;
-  label.innerHTML='<img class="checkImage" src="assets/check.png">';
-  // console.log(label);
+  label.innerHTML = '<img class="checkImage" src="assets/check.png">';
+  label.className="doneLabel";
+   console.log({label});
   label.onclick= updateItemStatus;
 
   let span= document.createElement("span");
@@ -80,13 +83,16 @@ function remove() {
 
  function updateItemStatus()
  {
+   console.log('Update function called')
   let cbid= this.htmlFor.replace("cb_", "");
-  console.log({cbid});
-  let item = document.getElementById("item" + cbid);
-  if(this.checked){
-    item.className = "checked";
+  // console.log({cbid});
+  let span = document.getElementById("item" + cbid);
+  let checkBox = document.getElementById("cb_" + cbid);
+  console.log(checkBox.checked);
+  if(!checkBox.checked){
+    span.className = "checked";
   }
   else{
-    item.className = "" ;
+    span.className = "" ;
   }
 }
