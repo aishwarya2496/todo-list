@@ -1,29 +1,21 @@
-  /* .t{ 
-    margin-left: 20%;
-    margin-top: 15%;
-    margin-right:50%;
-    margin/*-bottom: 20%;
-
- }  */
- /* .todo{ 
-    margin:0 auto;
-}  */
-h1 {
-    color: #f7f6f0;
+h1{
+  text-align-last: center;
+  color: #36526D;
+}
+body{
+    background-color: #669FAF;
 }
 .todo-list {
-    background-color: #71777d;
+    background-color: #97C9D2
+;
     margin-top: 40px;
     padding: 0 10px 10px 10px;
     border-radius: 5px;
     min-height: 60vh;
 }
-body{
-    background-color: #fff;
-}
 #additem{
     background-color:rgba(0, 0, 0, 0);
-    border-color: #f7f6f0;
+    border-color: #46738D;
     border-width: 1px;
 }
 #add{
@@ -34,45 +26,79 @@ body{
     margin: 0;
     padding: 0;
 }
+
 ul{
     list-style: none;
     padding:0;
     margin:0;
+    
+}
+    ul li{
+        border: 1px solid #ccc;
+        background: #eee;
+        padding: 5px 10px;
+        color: #000;
+        position: relative;
+        width: 100%;
+      
+        
+        }
+    .item{
+        margin-bottom: 4px;
+        border-radius: 5px;
+        height: 38px;
+        background-color: rgba(240, 237, 240, 0.2);
+        border-color: #669FAF;
+        border-right: 2px solid #36526D;
+        padding-right: 20px;
+        border-left: 2px solid #36526D;
+        padding-left: 20px;
+       
+     
+     
+    }
+        li span{
+            padding-left: 20px;
+           
+        }
+        .checked{
+            text-decoration: line-through;
+        
+        }
+        .crossed{  
+        background-color: #F0EDF0;
+        border: none;
+        color: #36526D;
+        padding: 2px 6px 2px 6px;
+        font-size: 8px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 4px;
+        
+        }
+        li button{
+            position: absolute;
+            right: 10px;
+        }
+/* .done{
+    width: 15px;
+   background-color: #F0EDF0;
+   border-right: teal;
+   } */
+  
+input[type=checkbox] {
+    display: none;
+    border-right: #36526D;
+    border-style: solid;
+}
+/* .text{
+    height :80px;
+    width:80px;
+    background-color: #F0EDF0;
+} */
+ .checkImage{
+    width: 15px;
 
 }
-ul li{
-    border: 1px solid #ccc;
-    background: #eee;
-    padding: 5px 10px;
-    color: #000;
-    position: relative;
-    width: 100%;
-}
-li span{
-    padding-left: 20px;
-}
-.checked{
-    text-decoration: line-through;
-}
-.crossed{  
-background-color: DodgerBlue;
-border: none;
-color: white;
-padding: 2px 6px 2px 6px;
-font-size: 8px;
-cursor: pointer;
-}
-li button{
-    position: absolute;
-    right: 10px;
-    /* top: 150px; */
 
-}
-h1{
-  text-align-last: center
-}
-.item{
-    margin-bottom: 4px;
-    border-radius: 5px;
-    height: 38px;
-}
+     
