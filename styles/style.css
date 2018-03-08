@@ -36,7 +36,7 @@ ul{
     ul li{
         border: 1px solid #ccc;
         background: #eee;
-        padding: 5px 10px;
+        /* padding: 0px 10px; */
         color: #000;
         position: relative;
         width: 100%;
@@ -48,14 +48,7 @@ ul{
         border-radius: 5px;
         height: 38px;
         background-color: rgba(240, 237, 240, 0.2);
-        border-color: #669FAF;
-        border-right: 2px solid #36526D;
-        padding-right: 20px;
-        border-left: 2px solid #36526D;
-        padding-left: 20px;
-       
-     
-     
+        border-color: #669FAF; 
     }
         li span{
             padding-left: 20px;
@@ -63,23 +56,26 @@ ul{
         }
         .checked{
             text-decoration: line-through;
+            color:  #669FAF;
         
         }
         .crossed{  
         background-color: #F0EDF0;
         border: none;
         color: #36526D;
-        padding: 2px 6px 2px 6px;
+        margin: 8px 10px 10px 10px;
         font-size: 8px;
         cursor: pointer;
         border-radius: 5px;
-        margin-top: 4px;
+        float: right;
+        width : 20px;
+        height: 20px; 
         
         }
-        li button{
+        /* li button{
             position: absolute;
             right: 10px;
-        }
+        } */
 /* .done{
     width: 15px;
    background-color: #F0EDF0;
@@ -100,5 +96,8 @@ input[type=checkbox] {
     width: 15px;
 
 }
-
+.doneLabel{
+    padding: 11px 9px 10px 9px;
+    border-right: 1px solid  #669FAF;
+}
      
